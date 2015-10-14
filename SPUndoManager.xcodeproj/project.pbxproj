@@ -170,6 +170,8 @@
 		49F796B71B23505E00DAEB3A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = tog15;
 				TargetAttributes = {
@@ -419,6 +421,7 @@
 				49F796D81B23505E00DAEB3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		49F796D91B23505E00DAEB3A /* Build configuration list for PBXNativeTarget "SPUndoManagerTests" */ = {
 			isa = XCConfigurationList;
@@ -427,6 +430,7 @@
 				49F796DB1B23505E00DAEB3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

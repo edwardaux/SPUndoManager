@@ -4,7 +4,7 @@ import Foundation
 ///
 /// Make your own wrapper around this for brevity if you want
 public func SPUndoManagerGet() -> SPUndoManager? {
-    return (NSDocumentController.sharedDocumentController().currentDocument??.undoManager as? SPUndoManager)
+    return (NSDocumentController.sharedDocumentController().currentDocument?.undoManager as? SPUndoManager)
 }
 
 public typealias Closure = () -> Void
