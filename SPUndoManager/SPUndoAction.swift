@@ -11,7 +11,7 @@ protocol SPUndoManagerAction {
 class SPUndoManagerStandardAction : SPUndoManagerAction {
     
     /// Assumes action already performed
-    init(description: String, forwards: Closure, backwards: Closure) {
+    init(description: String, forwards: @escaping Closure, backwards: @escaping Closure) {
         
         self.forwards = forwards
         self.backwards = backwards

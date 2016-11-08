@@ -1,28 +1,28 @@
 import Foundation
 
 extension Array {
-    func atIndex(index: Int) -> Element? {
+    func atIndex(_ index: Int) -> Element? {
         if index >= 0 && index < count {
             return self[index]
         }
         return nil
     }
     
-    func each(function: (element: Element) -> Void) {
+    func each(_ function: (_ element: Element) -> Void) {
         for e in self {
-            function(element: e)
+            function(e)
         }
     }
     
-    func eachForwards(function: (element: Element) -> Void) {
+    func eachForwards(_ function: (_ element: Element) -> Void) {
         for i in 0 ..< self.count {
-            function(element: self[i])
+            function(self[i])
         }
     }
     
-    func eachBackwards(function: (element: Element) -> Void) {
-        for i in (0..<self.count).reverse() {
-            function(element: self[i])
+    func eachBackwards(_ function: (_ element: Element) -> Void) {
+        for i in (0..<self.count).reversed() {
+            function(self[i])
         }
     }
 }
