@@ -1,4 +1,5 @@
 import Foundation
+import Cocoa
 
 /// Get the shared document controller's undo manager and cast to SPUndoManager
 ///

@@ -37,6 +37,7 @@
 		49F796DE1B2350A900DAEB3A /* SPUndoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPUndoManager.swift; sourceTree = "<group>"; };
 		49F796E01B2350B600DAEB3A /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		49F796E21B2350C600DAEB3A /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		BF3687C12404714500FE8A6A /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +62,7 @@
 		49F796B61B23505E00DAEB3A = {
 			isa = PBXGroup;
 			children = (
+				BF3687C12404714500FE8A6A /* Package.swift */,
 				49F796C21B23505E00DAEB3A /* SPUndoManager */,
 				49F796CF1B23505E00DAEB3A /* SPUndoManagerTests */,
 				49F796C11B23505E00DAEB3A /* Products */,
