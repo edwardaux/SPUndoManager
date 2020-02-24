@@ -42,12 +42,14 @@ class SPUndoManagerSuperDynamicAction : SPUndoManagerAction {
     
     var undoable: Undoable
     var description: String
+    var actionCompletion: ActionCallbackClosure?
     
     /// Assumes action performed, in 'done' state by default
-    init(undoable: Undoable) {
+    init(undoable: Undoable, actionCompletion: ActionCallbackClosure? = nil) {
         self.undoable = undoable
         self.description = undoable.description
         self.done = true
+        self.actionCompletion = actionCompletion
     }
     
     var done: Bool
@@ -55,11 +57,13 @@ class SPUndoManagerSuperDynamicAction : SPUndoManagerAction {
         assert(done)
         self.undoable = undoable.undo()
         done = false
+        actionCompletion?(.undo)
     }
     func redo() {
         assert(!done)
         self.undoable = undoable.undo()
         done = true
+        actionCompletion?(.redo)
     }
 }
 

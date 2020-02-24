@@ -9,6 +9,11 @@ public func SPUndoManagerGet() -> SPUndoManager? {
 
 public typealias Closure = () -> Void
 
+public enum Action {
+    case undo, redo
+}
+public typealias ActionCallbackClosure = (Action) -> Void
+
 open class SPUndoManager : UndoManager {
     
     public override init() {
@@ -35,9 +40,8 @@ open class SPUndoManager : UndoManager {
     
     /// Add a super cool undoable action which always returns an undoable version 
     /// of itself upon undoing or redoing (both are classed as undo)
-    open func registerChange(_ undoable: Undoable) {
-        
-        addAction(SPUndoManagerSuperDynamicAction(undoable: undoable))
+    open func registerChange(_ undoable: Undoable, actionCompletion: ActionCallbackClosure? = nil) {
+        addAction(SPUndoManagerSuperDynamicAction(undoable: undoable, actionCompletion: actionCompletion))
     }
     
     // MARK: Grouping
